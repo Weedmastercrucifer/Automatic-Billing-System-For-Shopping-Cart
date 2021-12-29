@@ -36,8 +36,7 @@ module main_module(
     wire ClkFSM;
     Clock_Division c1(Clk,Rst,Clk190);
     assign P=P1|P2|P3;
-    Debounce d1(Clk190,P,Rst,ClkFSM); 
-    //Item_select i1(P1,P2,P3,Item,ClkFSM); 
+    Debounce d1(Clk190,P,Rst,ClkFSM);  
     Automatic_Bill A1(ClkFSM,Rst,Pay,P3,P2,P1,B);
     vio_0 v1(Clk,B);
     assign Bill=B;
